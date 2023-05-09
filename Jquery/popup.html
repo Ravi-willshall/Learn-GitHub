@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>      
+		<style>
+			.content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 500px;
+				height: 400px;
+				text-align: center;
+				background-color: #CCC;
+				box-sizing: border-box;
+				padding: 10px;
+				display: none;
+			}
+			  h2{
+				  color:red;
+			  }
+			.close{
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				background-color: black;
+				color: white;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	  
+	<body>
+		<button onclick="togglePopup()">show popup</button>
+		<div class="content">
+			<div onclick="togglePopup()" class="close">×</div>
+			<h2>Popup</h2>	  
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Vivamus lacus lectus, feugiat id sollicitudin eget,
+				vestibulum ac nisi. Proin ut risus suscipit,
+				aliquam nisl porta, ornare ante. Praesent ultricies varius sem,
+				nec fringilla ante euismod sit amet. Cras sit amet congue enim.
+				In nec gravida turpis. Vestibulum commodo neque metus,
+				cursus condimentum sapien dictum posuere.
+				Pellentesque quis diam placerat, placerat augue quis, interdum enim
+			</p>
+		</div>	  
+		<script type="text/javascript">
+			function togglePopup() {
+				$(".content").toggle();
+			}
+		</script>
+	</body>  
+</html>
