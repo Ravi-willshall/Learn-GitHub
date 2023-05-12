@@ -1,4 +1,4 @@
-<!--This code will add on template file (index.php) file -->
+<!-- This code will add on template file (index.php) file -->
 
 <div class="container">
    
@@ -87,7 +87,7 @@ function my_action() {
 		'post_type'=>'post',
 		'paged'=> $paged,
 		'post_status'=>'publish'																
-	);
+);
 	
 	$query = new Wp_Query($args);	
 	if( $query->have_posts()){		
