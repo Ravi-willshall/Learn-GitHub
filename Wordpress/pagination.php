@@ -8,3 +8,12 @@
 				'post_status'=>'publish'																
 			);
 			$query = new Wp_Query($args);
+           
+            //Create a Loop
+            if( $query->have_posts()){		
+				while($query->have_posts()){ 
+				$query->the_post();										
+				    $post_id = get_the_ID();
+						$category_object = get_the_category($post_id);
+						$category_name = $category_object[0]->name;					
+		?>	
