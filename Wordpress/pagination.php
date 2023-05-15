@@ -29,3 +29,22 @@
 					 	
    <a class="read-more-btn" href="<?php the_permalink(); ?>">Read the case study</a>
 </div>
+<?php 
+				}				
+			}?>
+			<div class="pagination_sec">
+				<?php
+					$big = 999999999; // need an unlikely integer
+					 echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url(get_pagenum_link( $big ) )),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('page') ),
+						'total' => $query->max_num_pages,
+						'prev_text'    => __('«'),
+						'next_text'    => __('»'),
+					) );
+				?>
+			</div>
+			<?php
+			 wp_reset_postdata();
+			?>
