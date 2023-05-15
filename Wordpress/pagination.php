@@ -17,3 +17,15 @@
 						$category_object = get_the_category($post_id);
 						$category_name = $category_object[0]->name;					
 		?>	
+        <!-- Display post content here-->
+<div class="card-col"> 
+	 <div class="card-image">
+		<?php the_post_thumbnail();?>					
+		 <img src="/wp-content/uploads/2023/05/card-img.jpg">				 
+	 </div>			 
+		<?php echo $category_name;?>
+		<?php the_title();?>		 
+		<?php echo the_excerpt();?>
+					 	
+   <a class="read-more-btn" href="<?php the_permalink(); ?>">Read the case study</a>
+</div>
